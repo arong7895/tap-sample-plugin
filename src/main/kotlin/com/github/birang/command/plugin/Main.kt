@@ -18,7 +18,7 @@ class Main : JavaPlugin(), Listener {
         getServer().getPluginManager().registerEvents(this, this)
 
         saveConfig()
-        val cfile = File(getDataFolder(), "config.yml")
+        var cfile = File(getDataFolder(), "config.yml")
         if (cfile.length().equals(0)) {
             getConfig().options().copyDefaults(true)
             saveConfig()
